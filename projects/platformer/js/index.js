@@ -7,6 +7,7 @@ $(document).ready(function () {
         game = opspark.createGame(create, update),
         lives = 3;
         
+        
     function create() {
         game.opspark.init();
         
