@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2021 by anonymous (http://jsbin.com/rosucuparo/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Report Card</title>
+  <style>
+    h1 {
+      text-align: center;
+      border: 2px solid black;
+      padding: 10px;
+    }
+    h2 {
+      text-align: left;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+    <h1>Report Card</h1>
+    <script src="reportCard.js"></script>
+  
+<script id="jsbin-javascript">
+//good grades simulator
+
+
+
+
+//functions decs go below here
+
+function classAvg(a){
+      var class1 = (a);
+      
+      var Test1 = Number(prompt(" What is your " + class1 + " test 1 grade (out of 100)?"));
+          document.write("<p>" + "<li>" + "Your Test1 grade is " + Test1 + "</li>" + "</p>");
+      var Test2 = Number(prompt(" What is your " + class1 + " test 2 grade?"));
+          document.write("<p>" + "<li>" + "Your Test2 grade is " + Test2 + "</li>" + "</p>");
+      var Test3 = Number(prompt(" What is your " + class1 + " test 3 grade?"));
+          document.write("<p>" + "<li>" + "Your Test3 grade is " + Test3 + "</li>" + "</p>");
+      var Test4 = Number(prompt(" What is your " + class1 + " test 4 grade?"));
+          document.write("<p>" + "<li>" + "Your Test4 grade is " + Test4 + "</li>" + "</p>");
+         var classGrade = ((Test1 + Test2 + Test3 + Test4)/4);
+  
+      if (classGrade <= 66);  {
+         letterGrade = "F"; 
+      }
+  
+      if (classGrade >= 67 && classGrade <= 74) {
+         letterGrade = "D"; 
+      } 
+  
+      if (classGrade >= 75 && classGrade <= 84) {
+         letterGrade = "C"; 
+      }
+  
+      if(classGrade >= 85 && classGrade <= 92)  {
+         letterGrade = "B"; 
+      }
+  
+      if(classGrade >= 93 && classGrade <= 100){
+        letterGrade = "A"; 
+      }
+
+document.write("<h3>" + "Your " + class1 + " average is " + letterGrade + "</h3>");  
+  
+  
+  return classGrade;
+  }
+//  gpa function here
+
+function gpaAvg(a,b,c,d){ // reused some variables here for conveinence.
+    var class1 = a;
+    var class2 = b;
+    var class3 = c;
+    var class4 = d;
+ 
+    var classTotal = ((a + b + c +d)/4)
+       //console.log(classTotal);
+      
+     var gpa;
+    
+    
+    
+
+
+
+    
+
+    
+
+
+    
+    if (classTotal <= 100 && classTotal >= 93){
+       gpa = 4.0;
+    }
+  
+    
+    else if (classTotal <= 92 && classTotal >= 90){
+       gpa = 3.7;
+    }
+  
+    else if (classTotal <= 89 && classTotal >= 87){
+       gpa = 3.3;
+    }
+    
+    else if (classTotal <= 86 && classTotal >= 83){
+       gpa = 3.0;
+    }
+  
+    else if (classTotal <= 82 && classTotal >= 80){
+       gpa = 2.7;
+    }
+    else if (classTotal <= 79 && classTotal >= 77){
+       gpa = 2.3;
+    }
+        
+    else if (classTotal <= 76 && classTotal >= 73){
+       gpa = 2.0;
+    }
+  
+    else if (classTotal <= 72 && classTotal >= 70){
+       gpa = 1.7;
+    }
+  
+    else if (classTotal <= 69 && classTotal >= 67){
+       gpa = 1.3;
+    }
+  
+    else if (classTotal <= 66 && classTotal >= 65){
+       gpa = 1.0;
+    }
+    
+    else if (classTotal < 65){
+       gpa = 0.0;
+    }
+  
+  
+    return gpa;
+}
+
+
+
+//functions decs go above here
+
+
+
+
+
+
+//main code and function calls here
+
+
+var class1 = prompt("What is your first class?")
+document.write("<h2>" + class1 + ' grade' + "</h2>");
+var class1Avg = classAvg(class1);
+
+var class2 = prompt("What is your second class?")
+document.write("<h2>" + class2 + ' grade' + "</h2>");
+var class2Avg = classAvg(class2);
+
+var class3 = prompt("What is your third class?")
+document.write("<h2>" + class3 + ' grade' + "</h2>");
+var class3Avg = classAvg(class3);
+
+var class4 = prompt("What is your fourth class?")
+document.write("<h2>" + class4 + ' grade' + "</h2>");
+var class4Avg = classAvg(class4);
+
+var gpa = gpaAvg(class1Avg, class2Avg, class3Avg, class4Avg);
+
+document.write("<h2>" + "Your overall GPA for all classes is " + gpa + "</h2>");
+
+
+
+
+/*Program should:
+  -use functions
+  -ask user what four classes they take.
+  -ask users what they got on four tests in each subject.
+  -calculates their test average??
+  -calculates their letter grade in each class.
+  -calculates their overall GPA .
+  -prints all information like a report card.
+*/
+//I recommend using 3 or 4 functions.
+
+
+
+</script>
+</body>
+</html>
