@@ -29,7 +29,7 @@ var init = function (window) {
 
         // TODO 2 : Create a function that draws a circle 
         
-        function drawcircles(){
+        function drawCircle(){
 
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
             physikz.addRandomVelocity(circle, canvas);
@@ -42,10 +42,11 @@ var init = function (window) {
 
 
 
-        // TODO 3 / 8 : Call the drawCircle() function // replace 5 with circles.length 
+        // TODO 3 / 8 : Call the drawCircle() function // how many times it gets called
 
-        for (var i = 0; i < 5; i--){
-                physikz.addRandomVelocity(circle, canvas, 20, 20);
+        for (var i = 0; i < 100; i++){
+                drawCircle();
+            //physikz.addRandomVelocity(circle, canvas, 20, 20);
         }
 
 
@@ -61,7 +62,7 @@ var init = function (window) {
         function update() {
             // TODO 4 : Update the circle's position //
                 for (var i = 0; i < circles.length; i++){
-                    physikz.updatePosition(cricles[i]);
+                    physikz.updatePosition(circles[i]);
                 }
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
@@ -71,7 +72,14 @@ var init = function (window) {
                 }
 
             // TODO 9 : Iterate over the array
-           
+                for (var i = 0; i < circles.length; i++){
+                        //??
+                    //var eachCircle = circles[i];
+                        //??
+                    //physikz.updatePosition(eachCircle);
+                   // game.checkCirclePosition(eachCircle);
+
+                }
             
         }
     
@@ -88,7 +96,21 @@ var init = function (window) {
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
+            //if circle has gone above the top it teleports the the bottom of the screen.
+            if (circle.y > canvas.height){
+                circle.y = 0;
+            }
             
+            //if circle has dipped belows the screen, it teleports to the top.
+            if (circle.y < 0){
+                circle.y = canvas.height;
+            }
+
+            //if circle goes byond the left it teleports to the very right
+            if (circle.x = 0){
+                circle.x = canvas.width;
+            }
+
 
 
             // YOUR TODO 7 CODE ENDS HERE //////////////////////////
