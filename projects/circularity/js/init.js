@@ -46,7 +46,7 @@ var init = function (window) {
 
         for (var i = 0; i < 100; i++){
                 drawCircle();
-            //physikz.addRandomVelocity(circle, canvas, 20, 20);
+            physikz.addRandomVelocity(circle, canvas, 10, 11);
         }
 
 
@@ -62,22 +62,22 @@ var init = function (window) {
         function update() {
             // TODO 4 : Update the circle's position //
                 for (var i = 0; i < circles.length; i++){
-                    physikz.updatePosition(circles[i]);
+                    //physikz.updatePosition(circles[i]);
                 }
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
 
                 for( var i = 0; i < circles.length; i++){
-                    game.checkCirclePosition(circles[i]);
+                    //game.checkCirclePosition(circles[i]);
                 }
 
             // TODO 9 : Iterate over the array
                 for (var i = 0; i < circles.length; i++){
                         //??
-                    //var eachCircle = circles[i];
+                    var eachCircle = circles[i];
                         //??
-                    //physikz.updatePosition(eachCircle);
-                   // game.checkCirclePosition(eachCircle);
+                    physikz.updatePosition(eachCircle);
+                   game.checkCirclePosition(eachCircle);
 
                 }
             
@@ -107,7 +107,7 @@ var init = function (window) {
             }
 
             //if circle goes byond the left it teleports to the very right
-            if (circle.x = 0){
+            if (circle.x < 0){
                 circle.x = canvas.width;
             }
 
