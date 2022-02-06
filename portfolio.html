@@ -14,6 +14,8 @@
                 font-weight: bold;
             }
             h1 {
+                text-align: center;
+                color: rgb(161, 7, 7);
                 margin: 10px;
             }
             #all-contents {
@@ -23,8 +25,11 @@
     
             /* navigation menu */
             nav {
-                background: rgb(239, 80, 41);
+                background-image: linear-gradient( rgb(239, 80, 41), rgb(161, 7, 7));
+                box-shadow: -6px -4px 2px -2px rgba(0,0,0,0.4);
+                border-radius: 20px/60px;
                 margin: 0 auto;
+                margin-bottom: 20px;
                 display: flex;
                 padding: 10px;
             }
@@ -37,19 +42,24 @@
             nav ul {
                 list-style-image: none;
             }
-            nav li {
-                display: inline-block;
-                padding: 0 10px;
+            nav button {
+                display: inline;
+                padding: 7px 40px;
+                margin: 7px 10px;
+                border-radius: 20px/60px;
+                box-shadow: -6px -4px 2px -2px rgba(0,0,0,0.4);
+            
             }
             nav a {
                 text-decoration: none;
-                color: #fff;
+                color: rgb(7, 7, 7);
             }
     
             /* main container area beneath menu */
             main {
                 background: rgb(245, 238, 219);
                 display: flex;
+                border-radius: 20px/60px;
             }
             .content {
                 flex: 1;
@@ -59,6 +69,7 @@
              #portfolio {
                 list-style-type: none;
                 padding-left: 0;
+                
             }
             
             #portfolio li {
@@ -84,10 +95,10 @@
         <nav>
             <header> About Me </header>
             <ul>
-                <li><a href="index.html">Home</a>
-                </li>
-                <li><a href="portfolio.html">Portfolio</a>
-                </li>
+                <button> <a href="index.html">Home</a>
+                </button>
+                <button><a href="portfolio.html">Portfolio</a>
+                </button>
             </ul>
         </nav>
         <main>
