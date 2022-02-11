@@ -1,2 +1,2 @@
 # pythonswirls.github.io
-learning javascript
+Learing javascript for the OperationSpark certification.
