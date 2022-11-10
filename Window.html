@@ -1,0 +1,136 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>OS.js</title>
+    <style type="text/css">
+    body {
+        background: rgb(125, 198, 205);
+        color: rgb(45, 45, 45);
+        padding: 10px;
+        font-family: arial;
+    }
+    header {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    h1 {
+        text-align: center;
+        color: rgb(161, 7, 7);
+        margin: 10px;
+    }
+    #all-contents {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* navigation menu */
+    nav {
+        background-image: linear-gradient( rgb(239, 80, 41), rgb(161, 7, 7));
+        box-shadow: -6px -4px 2px -2px rgba(0,0,0,0.4);
+        border-radius: 20px/60px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: flex;
+        padding: 10px;
+    }
+    nav header {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        flex: 1;
+    }
+    nav ul {
+        list-style-image: none;
+    }
+    nav button {
+        display: inline;
+        padding: 7px 40px;
+        margin: 7px 10px;
+        border-radius: 20px/60px;
+        box-shadow: -6px -4px 2px -2px rgba(0,0,0,0.4);
+    
+    }
+    nav a {
+        text-decoration: none;
+        color: rgb(7, 7, 7);
+    }
+
+    /* main container area beneath menu */
+    main {
+        background: rgb(245, 238, 219);
+        display: flex;
+        border-radius: 20px/60px;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+     /* portfolio styles */
+     #portfolio {
+        list-style-type: none;
+        padding-left: 0;
+        
+    }
+    
+    #portfolio li {
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #portfolio li:hover {
+        background: #eee;
+    } 
+    
+    #portfolio a {
+        text-decoration: none;
+        color: #454545;
+    }
+
+    /* Button center */
+    .center {
+        margin-left: 23%;
+        padding-left: 25%;
+        padding-right: 25%
+    }
+
+    </style>
+</head>
+<body>
+    <div id="all-contents">
+    <nav>
+        <header> OS.js </header>
+        <ul>
+            <button onclick="window.location.href='index.html';"> 
+                Home
+            </button>
+            <button onclick="window.location.href='portfolio.html';">
+                Portfolio
+            </button>
+        </ul>
+    </nav>
+
+    <main>
+        <script>
+            function click(){
+                
+
+            };
+                
+            
+        </script>
+        <div class="content">
+            <button class="center" onclick="click()">
+              hello   
+            </button>
+            <ul id="portfolio">  
+            </ul>
+
+        
+        </div>
+    </main>  
+
+</body>
+</html>
